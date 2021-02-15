@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from "react";
+import CsvParser from "./CsvParser.js";
 
 function App() {
+  const [stockHistory, setStockHistory] = useState(null);
+
+  useEffect( () => {
+    console.log(stockHistory);
+  })
+  function onFileUpload(e) {
+    CsvParser(e.target.files[0], setStockHistory)
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>
+        Stock watch
+      </h1>
+      {stockHistory === null
+        ?<div>
+          <input type="file" accept=".csv" onChange={onFileUpload} multiple={false} />
+        </div>
+        :<div>
+          <button onClick={() => setStockHistory(null)}>Select another file</button>
+        </div>
+      }
     </div>
   );
 }
