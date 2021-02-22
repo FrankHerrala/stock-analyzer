@@ -16,7 +16,8 @@ function DatePicker(props){
 
     return(
         <DatePickerComponent 
-            id="datepicker" 
+            id="datepicker"
+            format="dd-MM-yy"
             placeholder="Select date"
             onChange={e => onChange(e)}
             min={props.minDate}

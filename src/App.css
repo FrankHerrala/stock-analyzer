@@ -13,7 +13,7 @@
 
 header{
   text-align: center;
-  color: #fcf8ec;
+  color: white;
   background: #79a3b1;
   padding: 2rem;
   font-weight: 1000;
@@ -27,7 +27,7 @@ footer{
 }
 
 .App a{
-  color: #fcf8ec;
+  color: white;
 }
 
 .AnalysisContainer {
@@ -97,7 +97,7 @@ footer{
 }
 
 .MainBody{
-  background-color: #fcf8ec;
+  background-color: white;
   text-align: center;
 }
 
@@ -121,7 +121,7 @@ footer{
   font-size: 16px;
   font-weight: 1000;
   background-color: #456268;
-  color:aliceblue;
+  color:white;
   border-radius: 10px;
   margin: 10px;
   border: none;
@@ -132,7 +132,7 @@ footer{
 
 .Mainbody, button:hover, label:hover {
   background-color: #79a3b1;
-  color:aliceblue;
+  color:white;
   cursor: pointer;
   transform: scale(1.1);
 }

@@ -30,7 +30,7 @@ function MovingAverage(props){
                 })
                 lastFiveClosePrices.shift()
             }
-            lastFiveClosePrices.push(props.stockHistory[i].open);
+            lastFiveClosePrices.push(props.stockHistory[i].close);
         }
         return {"movingAverages": movingAverages.sort(compare), "noDataDays": noDataDays};
     }
