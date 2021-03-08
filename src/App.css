@@ -4,157 +4,163 @@
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
 
-.App{
-  display: grid;
-  height: 100vh;
-  grid-template-rows: auto 1fr auto;
-  font-family: monospace;
+.App {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-family: monospace;
 }
 
-header{
-  text-align: center;
-  color: white;
-  background: #79a3b1;
-  padding: 2rem;
-  font-weight: 1000;
-  font-size: 28px;
+header {
+    text-align: center;
+    color: white;
+    background: #79a3b1;
+    padding: 2rem;
+    font-weight: 1000;
+    font-size: 28px;
 }
 
-footer{
-  background: #456268;
-  padding: 2rem;
-  text-align: center;
+footer {
+    background: #456268;
+    padding: 2rem;
+    text-align: center;
 }
 
-.App a{
-  color: white;
+.App a {
+    color: white;
 }
 
 .AnalysisContainer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  width: clamp(260px, 80%, 700px);
-  align-items: stretch;
-  font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: clamp(260px, 80%, 700px);
+    align-items: stretch;
+    font-size: 18px;
 }
 
-.MainContent{
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+.MainContent {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
-.DateSelectionGrid{
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-self: center;
+.DateSelectionGrid {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
 }
 
-.DateSelector{
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
+.DateSelector {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
 
-#VolumesTable{
-  margin: 10px;
-  flex-basis: max-content;
+#VolumesTable {
+    margin: 10px;
+    flex-basis: max-content;
 }
 #VolumesTable,
 #MovingAverageTable,
-#VolumesTable th, 
+#VolumesTable th,
 #VolumesTable td {
-  border-collapse: collapse;
-  text-align: center;
-  font-family: monospace;
-  font-size: 18px;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
 }
 
 #VolumesTable th,
 #MovingAverageTable th {
-  width: 33.3%;
-  border-bottom: 1px solid #456268;
+    width: 33.3%;
+    border-bottom: 1px solid #456268;
 }
 
 #MovingAverageTable th {
-  width: 50%;
+    width: 50%;
 }
 
-#VolumesTable td:nth-child(3), 
+#VolumesTable td:nth-child(3),
 #VolumesTable th:nth-child(3) {
-  border-left: 1px solid #456268;
+    border-left: 1px solid #456268;
 }
 
-#VolumesTable td:nth-child(1), 
+#VolumesTable td:nth-child(1),
 #VolumesTable th:nth-child(1),
-#MovingAverageTable td:nth-child(1), 
-#MovingAverageTable th:nth-child(1){
-  border-right: 1px solid #456268;
+#MovingAverageTable td:nth-child(1),
+#MovingAverageTable th:nth-child(1) {
+    border-right: 1px solid #456268;
 }
 
-.MainBody{
-  background-color: white;
-  text-align: center;
+.MainBody {
+    background-color: white;
+    text-align: center;
 }
 
-.InfoText{
-  color: black;
-  font-family: monospace;
-  font-size: 16px;
-  text-align: center;
+.InfoText {
+    color: black;
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
 }
 
-.FileInput{
-  opacity: 0;
-  width: 0.1px;
-  height: 0.1px;
-  position: absolute;
+.FileInput {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
 }
 
-.Mainbody, button, label{
-  font-family: monospace;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 1000;
-  background-color: #456268;
-  color:white;
-  border-radius: 10px;
-  margin: 10px;
-  border: none;
-  width: 200px;
-  align-self: center;
-  transition: 0.5s;
+.Mainbody,
+button,
+label {
+    font-family: monospace;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 1000;
+    background-color: #456268;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    width: 200px;
+    align-self: center;
+    transition: 0.5s;
 }
 
-.Mainbody, button:hover, label:hover {
-  background-color: #79a3b1;
-  color:white;
-  cursor: pointer;
-  transform: scale(1.1);
+.Mainbody,
+button:hover,
+label:hover {
+    background-color: #79a3b1;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-.Mainbody, button:focus, label:focus {
-  outline: none;
-  box-shadow: 0 0px 2px 2px #fd7b7b;
+.Mainbody,
+button:focus,
+label:focus {
+    outline: none;
+    box-shadow: 0 0px 2px 2px #fd7b7b;
 }
 
-.DisabledButtons button{
-  background-color: grey;
-  text-decoration: line-through;
+.DisabledButtons button {
+    background-color: grey;
+    text-decoration: line-through;
 }
 
-.DisabledButtons{
-  display: flex;
-  flex-direction: column;
+.DisabledButtons {
+    display: flex;
+    flex-direction: column;
 }
 
-.Buttons{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+.Buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
